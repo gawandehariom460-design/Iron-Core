@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Makes the page responsive on phones/tablets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IronCore Fitness | Gym &amp; Fitness Landing Page</title>
+  <meta name="description" content="IronCore Fitness - Gym & Fitness Landing Page demo project. Build your stronger self with our strength, weight loss, personal training and cardio programs.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Our own stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <!-- ============================================================= -->
+  <!-- NAVIGATION BAR                                                 -->
+  <!-- ============================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+
+      <!-- Logo -->
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-dumbbell"></i>
+        IRON<span>CORE</span>
+      </a>
+
+      <!-- Hamburger button (only visible on small screens) -->
+      <button class="nav-toggle" id="navToggle"
+              aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Navigation links (smooth-scroll to each section) -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#programs" class="nav-link">Programs</a></li>
+          <li><a href="#trainers" class="nav-link">Trainers</a></li>
+          <li><a href="#membership" class="nav-link">Membership</a></li>
+          <li><a href="#contact" class="nav-link btn-cta">Join Now</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================= -->
+    <!-- HERO / HOME SECTION                                            -->
+    <!-- ============================================================= -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <!-- Project title -->
+        <p class="eyebrow">Gym &amp; Fitness Landing Page</p>
+        <h1>BUILD YOUR<br><span class="accent">STRONGER</span> SELF</h1>
+        <p class="hero-desc">
+          Welcome to IronCore Fitness — where sweat turns into strength.
+          Train with expert coaches, follow proven programs, and push past
+          your limits in a supportive, high-energy environment.
+        </p>
+        <div class="hero-buttons">
+          <!-- Both buttons jump to the contact form (they really work!) -->
+          <a href="#contact" class="btn btn-primary">Join Now <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#programs" class="btn btn-outline">Explore Programs</a>
+        </div>
+      </div>
+
+      <!-- Small info strip under the hero -->
+      <div class="hero-strip">
+        <div class="container strip-inner">
+          <span><i class="fa-solid fa-clock"></i> Open 5 AM – 11 PM</span>
+          <span><i class="fa-solid fa-location-dot"></i> Amravati, Maharashtra</span>
+          <span><i class="fa-solid fa-phone"></i> +91 90000 12345</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- ABOUT SECTION                                                  -->
+    <!-- ============================================================= -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+
+        <div class="about-image">
+          <img src="{{ url_for('static', filename='images/about.jpg') }}"
+               alt="Athletes training with weights inside the IronCore Fitness gym">
+        </div>
+
+        <div class="about-text">
+          <p class="section-tag">Who We Are</p>
+          <h2 class="section-title">About IronCore Fitness</h2>
+          <p>
+            IronCore Fitness is a demonstration gym built around one simple belief:
+            <strong>everyone has strength waiting to be unlocked</strong>. Our mission
+            is to help everyday people build confidence, energy and health through
+            structured, enjoyable training.
+          </p>
+          <p>
+            <strong>Our training philosophy</strong> is progressive and personal —
+            we start where <em>you</em> are, focus on safe technique, and gradually
+            increase intensity. No ego lifting, no judgement, just consistent progress.
+          </p>
+          <p>
+            <strong>Our facilities</strong> include a free-weights zone, cardio floor,
+            functional training area, group class studio, locker rooms and a recovery
+            corner with foam rollers and stretching space.
+          </p>
+
+          <!-- Fictional demonstration statistics (demo content only) -->
+          <div class="stats">
+            <div class="stat">
+              <i class="fa-solid fa-layer-group"></i>
+              <h3>15+</h3>
+              <p>Fitness Programs <span class="demo-note">(demo)</span></p>
+            </div>
+            <div class="stat">
+              <i class="fa-solid fa-calendar-check"></i>
+              <h3>120+</h3>
+              <p>Weekly Sessions <span class="demo-note">(demo)</span></p>
+            </div>
+            <div class="stat">
+              <i class="fa-solid fa-user-tie"></i>
+              <h3>10+</h3>
+              <p>Expert Trainers <span class="demo-note">(demo)</span></p>
+            </div>
+            <div class="stat">
+              <i class="fa-solid fa-heart"></i>
+              <h3>2000+</h3>
+              <p>Happy Members <span class="demo-note">(demo)</span></p>
+            </div>
+          </div>
+          <p class="demo-disclaimer">
+            <i class="fa-solid fa-circle-info"></i>
+            All statistics above are fictional demonstration figures created for this project.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- PROGRAMS SECTION                                               -->
+    <!-- ============================================================= -->
+    <section class="section section-alt" id="programs">
+      <div class="container">
+        <p class="section-tag center">What We Offer</p>
+        <h2 class="section-title center">Fitness Programs</h2>
+        <p class="section-subtitle center">
+          Pick the program that matches your goal. Every CTA button takes you
+          straight to our enquiry form.
+        </p>
+
+        <div class="cards-grid">
+
+          <!-- Card 1: Strength Training -->
+          <article class="card">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='images/strength.jpg') }}"
+                   alt="Person lifting a barbell during strength training">
+              <span class="card-badge">Popular</span>
+            </div>
+            <div class="card-body">
+              <div class="card-icon"><i class="fa-solid fa-dumbbell"></i></div>
+              <h3>Strength Training</h3>
+              <p>
+                Build raw power with compound lifts like squats, deadlifts and
+                bench press. Perfect for muscle gain and stronger bones.
+              </p>
+              <a href="#contact" class="card-link"
+                 data-program="Strength Training">Join This Program <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Card 2: Weight Loss -->
+          <article class="card">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='images/weightloss.jpg') }}"
+                   alt="Person doing a weight-loss workout with a trainer">
+            </div>
+            <div class="card-body">
+              <div class="card-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+              <h3>Weight Loss</h3>
+              <p>
+                A friendly mix of strength circuits, HIIT and simple nutrition
+                guidance designed to burn fat and keep it off for good.
+              </p>
+              <a href="#contact" class="card-link"
+                 data-program="Weight Loss">Join This Program <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Card 3: Personal Training -->
+          <article class="card">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='images/personal.jpg') }}"
+                   alt="Personal trainer guiding a client through an exercise">
+              <span class="card-badge">1-on-1</span>
+            </div>
+            <div class="card-body">
+              <div class="card-icon"><i class="fa-solid fa-user-check"></i></div>
+              <h3>Personal Training</h3>
+              <p>
+                Get a custom workout plan and undivided attention from a certified
+                coach who keeps you accountable every step of the way.
+              </p>
+              <a href="#contact" class="card-link"
+                 data-program="Personal Training">Join This Program <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Card 4: Cardio Fitness -->
+          <article class="card">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='images/cardio.jpg') }}"
+                   alt="People running on treadmills in the cardio zone">
+            </div>
+            <div class="card-body">
+              <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+              <h3>Cardio Fitness</h3>
+              <p>
+                Strengthen your heart and boost endurance with treadmill runs,
+                cycling, jump rope intervals and group cardio classes.
+              </p>
+              <a href="#contact" class="card-link"
+                 data-program="Cardio Fitness">Join This Program <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- TRAINERS SECTION                                               -->
+    <!-- ============================================================= -->
+    <section class="section" id="trainers">
+      <div class="container">
+        <p class="section-tag center">Meet The Team</p>
+        <h2 class="section-title center">Our Expert Trainers</h2>
+        <p class="section-subtitle center">
+          Fictional trainer profiles created for demonstration purposes only.
+        </p>
+
+        <div class="cards-grid trainers-grid">
+
+          <!-- Trainer 1 -->
+          <article class="trainer-card">
+            <div class="trainer-image">
+              <img src="{{ url_for('static', filename='images/trainer1.jpg') }}"
+                   alt="Fictional trainer Arjun Mehta">
+            </div>
+            <div class="trainer-body">
+              <h3>Arjun Mehta</h3>
+              <p class="trainer-role">Head Strength Coach</p>
+              <p class="trainer-bio">
+                8+ years experience in powerlifting and functional strength.
+                Loves helping beginners nail their first perfect squat.
+              </p>
+              <div class="trainer-socials">
+                <a href="#contact" aria-label="Contact Arjun Mehta"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#contact" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#contact" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Trainer 2 -->
+          <article class="trainer-card">
+            <div class="trainer-image">
+              <img src="{{ url_for('static', filename='images/trainer2.jpg') }}"
+                   alt="Fictional trainer Priya Sharma">
+            </div>
+            <div class="trainer-body">
+              <h3>Priya Sharma</h3>
+              <p class="trainer-role">Weight Loss &amp; Nutrition Specialist</p>
+              <p class="trainer-bio">
+                Certified in sports nutrition and HIIT coaching. Her
+                practical, no-fuss plans make fat loss feel achievable.
+              </p>
+              <div class="trainer-socials">
+                <a href="#contact" aria-label="Contact Priya Sharma"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#contact" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#contact" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Trainer 3 -->
+          <article class="trainer-card">
+            <div class="trainer-image">
+              <img src="{{ url_for('static', filename='images/trainer3.jpg') }}"
+                   alt="Fictional trainer Rohan Desai">
+            </div>
+            <div class="trainer-body">
+              <h3>Rohan Desai</h3>
+              <p class="trainer-role">Cardio &amp; Mobility Coach</p>
+              <p class="trainer-bio">
+                Former marathon runner who specialises in endurance
+                conditioning, warm-ups and injury-prevention mobility work.
+              </p>
+              <div class="trainer-socials">
+                <a href="#contact" aria-label="Contact Rohan Desai"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#contact" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#contact" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- MEMBERSHIP SECTION                                             -->
+    <!-- ============================================================= -->
+    <section class="section section-alt" id="membership">
+      <div class="container">
+        <p class="section-tag center">Simple Pricing</p>
+        <h2 class="section-title center">Membership Plans</h2>
+        <p class="section-subtitle center">
+          All prices below are fictional demo rates — no real payments are involved.
+          Clicking <strong>"Choose Plan"</strong> opens the enquiry form.
+        </p>
+
+        <div class="cards-grid plans-grid">
+
+          <!-- Basic Plan -->
+          <article class="plan-card">
+            <h3 class="plan-name">Basic</h3>
+            <p class="plan-price">₹1,499<span>/month</span></p>
+            <p class="plan-note">Demo price</p>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> Gym floor access (6 AM – 9 PM)</li>
+              <li><i class="fa-solid fa-check"></i> Locker room access</li>
+              <li><i class="fa-solid fa-check"></i> 1 free consultation</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Group classes</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Personal trainer</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-block plan-btn"
+               data-plan="Basic">Choose Plan</a>
+          </article>
+
+          <!-- Standard Plan -->
+          <article class="plan-card featured">
+            <span class="plan-flag">Most Popular</span>
+            <h3 class="plan-name">Standard</h3>
+            <p class="plan-price">₹2,499<span>/month</span></p>
+            <p class="plan-note">Demo price</p>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> 24-hour gym access</li>
+              <li><i class="fa-solid fa-check"></i> Unlimited group classes</li>
+              <li><i class="fa-solid fa-check"></i> Monthly body check-up</li>
+              <li><i class="fa-solid fa-check"></i> 2 PT sessions per month</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Custom diet plan</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block plan-btn"
+               data-plan="Standard">Choose Plan</a>
+          </article>
+
+          <!-- Premium Plan -->
+          <article class="plan-card">
+            <h3 class="plan-name">Premium</h3>
+            <p class="plan-price">₹3,999<span>/month</span></p>
+            <p class="plan-note">Demo price</p>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> Everything in Standard</li>
+              <li><i class="fa-solid fa-check"></i> 8 PT sessions per month</li>
+              <li><i class="fa-solid fa-check"></i> Custom diet plan</li>
+              <li><i class="fa-solid fa-check"></i> Recovery &amp; sauna access</li>
+              <li><i class="fa-solid fa-check"></i> Guest pass (2 per month)</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-block plan-btn"
+               data-plan="Premium">Choose Plan</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- CONTACT SECTION                                                -->
+    <!-- ============================================================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <p class="section-tag center">Get In Touch</p>
+        <h2 class="section-title center">Contact Us</h2>
+        <p class="section-subtitle center">
+          Send a demo enquiry and our (fictional) team will get back to you.
+        </p>
+
+        <div class="contact-grid">
+
+          <!-- Contact details -->
+          <div class="contact-info">
+            <div class="info-card">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <h3>Phone</h3>
+                <!-- Fictional demo number -->
+                <p><a href="tel:+919000012345">+91 90000 12345</a></p>
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <!-- Fictional demo email -->
+                <p><a href="mailto:info@ironcore-demo.example">info@ironcore-demo.example</a></p>
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <h3>Location</h3>
+                <!-- Fictional demo address -->
+                <p>Demo Fitness Center,<br>Amravati, Maharashtra</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <h3>Opening Hours</h3>
+                <p>Mon – Sat: 5:00 AM – 11:00 PM<br>Sunday: 7:00 AM – 2:00 PM</p>
+              </div>
+            </div>
+            <p class="demo-disclaimer">
+              <i class="fa-solid fa-circle-info"></i>
+              All contact details above are fictional and used for demonstration only.
+            </p>
+          </div>
+
+          <!-- Contact form -->
+          <div class="contact-form-wrapper">
+            <h3>Send a Demo Enquiry</h3>
+
+            <!-- Feedback area: success/error messages appear here -->
+            <div id="formMessage" class="form-message" role="alert" aria-live="polite"></div>
+
+            <form id="contactForm" novalidate>
+              <!-- Full name -->
+              <div class="form-group">
+                <label for="full_name">Full Name <span class="required">*</span></label>
+                <input type="text" id="full_name" name="full_name"
+                       placeholder="e.g. Demo User" autocomplete="name">
+                <small class="error" id="error-full_name"></small>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email"
+                       placeholder="you@example.com" autocomplete="email">
+                <small class="error" id="error-email"></small>
+              </div>
+
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="e.g. +91 90000 12345" autocomplete="tel">
+                <small class="error" id="error-phone"></small>
+              </div>
+
+              <!-- Interested program -->
+              <div class="form-group">
+                <label for="program">Interested Program <span class="required">*</span></label>
+                <select id="program" name="program">
+                  <option value="">-- Select a program --</option>
+                  <option value="Strength Training">Strength Training</option>
+                  <option value="Weight Loss">Weight Loss</option>
+                  <option value="Personal Training">Personal Training</option>
+                  <option value="Cardio Fitness">Cardio Fitness</option>
+                </select>
+                <small class="error" id="error-program"></small>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5"
+                          placeholder="Tell us about your fitness goals..."></textarea>
+                <small class="error" id="error-message"></small>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="btn btn-primary btn-block" id="submitButton">
+                Submit Enquiry <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================= -->
+  <!-- FOOTER                                                         -->
+  <!-- ============================================================= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div class="footer-col">
+        <a href="#home" class="logo">
+          <i class="fa-solid fa-dumbbell"></i> IRON<span>CORE</span>
+        </a>
+        <p>
+          IronCore Fitness — a beginner-friendly Gym &amp; Fitness Landing Page
+          demo project built with HTML, CSS, JavaScript, Flask and SQLite.
+        </p>
+        <div class="footer-socials">
+          <a href="#contact" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#contact" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#contact" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#contact" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-phone"></i> +91 90000 12345</li>
+          <li><i class="fa-solid fa-envelope"></i> info@ironcore-demo.example</li>
+          <li><i class="fa-solid fa-location-dot"></i> Demo Fitness Center,<br>Amravati, Maharashtra</li>
+          <li><i class="fa-solid fa-clock"></i> Mon–Sat: 5 AM – 11 PM</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © <span id="currentYear">2026</span> IronCore Fitness. All rights reserved. |
+        Demo project — fictional data only.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Our JavaScript file -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

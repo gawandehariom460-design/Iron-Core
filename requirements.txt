@@ -1,0 +1,3 @@
+# Flask is the ONLY third-party dependency needed for this project.
+# sqlite3, re and the rest of the tools come with standard Python.
+Flask>=3.0.0
